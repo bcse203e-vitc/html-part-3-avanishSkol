@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flight Schedule</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f8f9fa;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 12px;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+    th {
+      background-color: #007BFF;
+      color: white;
+    }
+    td {
+      background-color: #ffffff;
+    }
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+    .international {
+      background-color: #f0e68c; /* Light yellow for international flights */
+    }
+    .on-time {
+      background-color: #d4edda; /* Light green for on-time flights */
+    }
+    .delayed {
+      background-color: #f8d7da; /* Light red for delayed flights */
+    }
+    .cancelled {
+      background-color: #e2e3e5; /* Light gray for cancelled flights */
+    }
+    abbr {
+      text-decoration: none;
+      border-bottom: 1px dotted #000;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Flight Schedule</h1>
+  
+  <table>
+    <caption><strong>Flight Schedule - October 2025</strong></caption>
+    <thead>
+      <tr>
+        <th>Flight Number</th>
+        <th>Destination</th>
+        <th>Departure Time</th>
+        <th>Arrival Time</th>
+        <th>Duration</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="on-time">
+        <td>UA101</td>
+        <td>Sydney</td>
+        <td>10:00 AM</td>
+        <td>12:30 PM</td>
+        <td><abbr title="2 hours 30 minutes">2h 30m</abbr></td>
+        <td>On Time</td>
+      </tr>
+      <tr class="international delayed">
+        <td>AF245</td>
+        <td>Amsterdam</td>
+        <td>1:00 PM</td>
+        <td>3:30 PM</td>
+        <td><abbr title="8 hours 30 minutes">8h 30m</abbr></td>
+        <td>Delayed</td>
+      </tr>
+      <tr class="cancelled">
+        <td>LH302</td>
+        <td>Mosscow</td>
+        <td>3:00 PM</td>
+        <td>5:00 PM</td>
+        <td><abbr title="2 hours">2h</abbr></td>
+        <td>Cancelled</td>
+      </tr>
+      <tr class="on-time">
+        <td>DL488</td>
+        <td>Dublin</td>
+        <td>4:30 PM</td>
+        <td>6:00 PM</td>
+        <td><abbr title="1 hour 30 minutes">1h 30m</abbr></td>
+        <td>On Time</td>
+      </tr>
+      <tr class="international">
+        <td>BA120</td>
+        <td>Washington D.C</td>
+        <td>6:00 PM</td>
+        <td>8:30 PM</td>
+        <td><abbr title="7 hours 30 minutes">7h 30m</abbr></td>
+        <td>On Time</td>
+      </tr>
+      <tr class="delayed">
+        <td>EK801</td>
+        <td>Qatar</td>
+        <td>9:00 PM</td>
+        <td>10:30 PM</td>
+        <td><abbr title="7 hours 30 minutes">7h 30m</abbr></td>
+        <td>Delayed</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>

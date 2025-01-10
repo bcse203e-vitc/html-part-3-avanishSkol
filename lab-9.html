@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <style>
+        /* General table styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        
+        /* Header row styles */
+        th {
+            background-color: #f4f4f4;
+        }
+
+        /* Alternating row colors for better readability */
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Vegetarian items styling */
+        .vegetarian {
+            color: green;
+        }
+
+        /* Table footer or additional info (if needed) */
+        tfoot {
+            font-weight: bold;
+            text-align: left;
+            padding-top: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            th, td {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            /* Stack table rows on smaller screens */
+            table, th, td {
+                display: block;
+                width: 100%;
+                text-align: left;
+            }
+
+            th {
+                background-color: #f4f4f4;
+                padding: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h2>Restaurant Menu</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Dish Name</th>
+            <th>Category</th>
+            <th>Ingredients</th>
+            <th>Price</th>
+            <th>Ratings</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Tomato Dish Rows -->
+        <tr>
+            <td rowspan="3">Tomato</td>
+            <td>Appetizer</td>
+            <td class="vegetarian">Tomato, Basil, Olive Oil</td>
+            <td>$5.00</td>
+            <td>★★★★☆</td>
+        </tr>
+        <tr>
+            <td>Main Course</td>
+            <td class="vegetarian">Tomato, Garlic, Olive Oil</td>
+            <td>$12.00</td>
+            <td>★★★★★</td>
+        </tr>
+        <tr>
+            <td>Dessert</td>
+            <td class="vegetarian">Tomato, Sugar, Vanilla</td>
+            <td>$7.50</td>
+            <td>★★★☆☆</td>
+        </tr>
+
+        <!-- Mushroom Dish Rows -->
+        <tr>
+            <td rowspan="2">Mushroom</td>
+            <td>Appetizer</td>
+            <td class="vegetarian">Mushroom, Garlic, Parsley</td>
+            <td>$6.00</td>
+            <td>★★★★☆</td>
+        </tr>
+        <tr>
+            <td>Main Course</td>
+            <td class="vegetarian">Mushroom, Cream, Garlic</td>
+            <td>$14.00</td>
+            <td>★★★★★</td>
+        </tr>
+
+        <!-- Grilled Chicken Row -->
+        <tr>
+            <td>Grilled Chicken</td>
+            <td>Main Course</td>
+            <td>Chicken, Olive Oil, Lemon, Garlic</td>
+            <td>$18.00</td>
+            <td>★★★★☆</td>
+        </tr>
+
+        <!-- Pavlova Dessert Row -->
+        <tr>
+            <td>Pavlova</td>
+            <td>Dessert</td>
+            <td>Egg Whites, Sugar, Fruit</td>
+            <td>$8.00</td>
+            <td>★★★☆☆</td>
+        </tr>
+        
+        <!-- Chocolate Cake Dessert Row -->
+        <tr>
+            <td>Chocolate Cake</td>
+            <td>Dessert</td>
+            <td>Flour, Cocoa Powder, Eggs, Butter</td>
+            <td>$6.50</td>
+            <td>★★★★★</td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
