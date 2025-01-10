@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conference Timetable</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f7f7f7;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+    td {
+      background-color: #ffffff;
+    }
+    .keynote {
+      background-color: #ffcc00;
+    }
+    .workshop {
+      background-color: #a9d0f5;
+    }
+    .panel {
+      background-color: #ffb6c1;
+    }
+    .legend {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      background-color: #fff;
+    }
+    .legend p {
+      margin: 5px 0;
+    }
+    .highlight {
+      background-color: #f1f1f1;
+    }
+    .tooltip {
+      position: relative;
+      cursor: pointer;
+    }
+    .tooltip:hover::after {
+      content: attr(title);
+      position: absolute;
+      top: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: black;
+      color: white;
+      padding: 5px;
+      border-radius: 5px;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Conference Timetable</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Time</th>
+        <th>Room A</th>
+        <th>Room B</th>
+        <th>Room C</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- 9:00 AM - 10:00 AM -->
+      <tr>
+        <td>9:00 AM - 10:00 AM</td>
+        <td class="keynote tooltip" title="Speaker: John Doe - 'The Future of AI'">Keynote</td>
+        <td class="workshop tooltip" title="Speaker: Jane Smith - 'Introduction to Python'">Workshop</td>
+        <td class="panel tooltip" title="Panelists: Alice Brown, Bob Green - 'Ethics in Technology'">Panel</td>
+      </tr>
+      <!-- 10:15 AM - 11:15 AM -->
+      <tr>
+        <td>10:15 AM - 11:15 AM</td>
+        <td class="workshop tooltip" title="Speaker: Michael Lee - 'Data Science with R'">Workshop</td>
+        <td class="keynote tooltip" title="Speaker: Sarah Johnson - 'The Rise of Quantum Computing'">Keynote</td>
+        <td class="panel tooltip" title="Panelists: Tom Harris, Laura White - 'The Impact of Social Media'">Panel</td>
+      </tr>
+      <!-- 11:30 AM - 1:00 PM -->
+      <tr>
+        <td>11:30 AM - 1:00 PM</td>
+        <td class="keynote tooltip" title="Speaker: Mark Davis - 'AI in Healthcare'">Keynote</td>
+        <td class="workshop tooltip" title="Speaker: Emma Stone - 'Machine Learning for Beginners'">Workshop</td>
+        <td rowspan="2" class="workshop tooltip" title="Speaker: Michael Lee - 'Data Science with R' (2 hours)">Workshop (2 hours)</td>
+      </tr>
+      <!-- 1:15 PM - 3:00 PM -->
+      <tr>
+        <td>1:15 PM - 3:00 PM</td>
+        <td colspan="2" class="panel tooltip" title="Panelists: Alice Brown, Bob Green - 'The Future of AI' (Extended)">Panel (Extended)</td>
+        <td class="workshop tooltip" title="Speaker: John White - 'Deep Learning'">Workshop</td>
+      </tr>
+      <!-- 3:15 PM - 4:15 PM -->
+      <tr>
+        <td>3:15 PM - 4:15 PM</td>
+        <td class="keynote tooltip" title="Speaker: Olivia Blue - 'Technology and Ethics'">Keynote</td>
+        <td class="workshop tooltip" title="Speaker: Peter Grey - 'Advanced AI Algorithms'">Workshop</td>
+        <td class="panel tooltip" title="Panelists: Daniel Black, Emma Green - 'Cybersecurity Trends'">Panel</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="legend">
+    <h3>Session Legend:</h3>
+    <p><span style="background-color: #ffcc00; padding: 5px;">Keynote</span>: Featured speaker sessions</p>
+    <p><span style="background-color: #a9d0f5; padding: 5px;">Workshop</span>: Hands-on learning sessions</p>
+    <p><span style="background-color: #ffb6c1; padding: 5px;">Panel</span>: Discussion panels with multiple speakers</p>
+  </div>
+
+</body>
+</html>

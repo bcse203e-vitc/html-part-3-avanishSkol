@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales Report</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f8f9fa;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 12px;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+    th {
+      background-color: #007BFF;
+      color: white;
+    }
+    td {
+      background-color: #ffffff;
+    }
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+    .highlight-region {
+      background-color: #ffeb3b;
+      font-weight: bold;
+    }
+    .footer {
+      background-color: #d9f7d9;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Sales Report</h1>
+  
+  <table>
+    <caption><strong>Sales Report - 2025</strong></caption>
+    <thead>
+      <tr>
+        <th>Region</th>
+        <th>Salesperson</th>
+        <th>Product</th>
+        <th>Quantity Sold</th>
+        <th>Unit Price ($)</th>
+        <th>Total Sales ($)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Row 1 -->
+      <tr>
+        <td>North</td>
+        <td>Walter White</td>
+        <td>Product A</td>
+        <td>50</td>
+        <td>20.00</td>
+        <td>1000.00</td>
+      </tr>
+      <!-- Row 2 -->
+      <tr>
+        <td>South</td>
+        <td>Saul Goodman</td>
+        <td>Product B</td>
+        <td>40</td>
+        <td>35.00</td>
+        <td>1400.00</td>
+      </tr>
+      <!-- Row 3 -->
+      <tr class="highlight-region">
+        <td>East</td>
+        <td>Franklin Saint</td>
+        <td>Product C</td>
+        <td>60</td>
+        <td>50.00</td>
+        <td>3000.00</td>
+      </tr>
+      <!-- Row 4 -->
+      <tr>
+        <td>West</td>
+        <td>Theadore McDonald</td>
+        <td>Product D</td>
+        <td>30</td>
+        <td>40.00</td>
+        <td>1200.00</td>
+      </tr>
+      <!-- Row 5 -->
+      <tr>
+        <td>East</td>
+        <td>Marcus Aurelius</td>
+        <td>Product E</td>
+        <td>20</td>
+        <td>70.00</td>
+        <td>1400.00</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr class="footer">
+        <td colspan="5">Grand Total</td>
+        <td>9000.00</td>
+      </tr>
+    </tfoot>
+  </table>
+
+</body>
+</html>

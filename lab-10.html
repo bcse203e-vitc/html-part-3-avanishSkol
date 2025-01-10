@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Tournament League Table</title>
+    <style>
+        /* General table styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        /* Header row style */
+        th {
+            background-color: #f4f4f4;
+        }
+
+        /* Team row styles for top 3 teams */
+        .top-team {
+            font-weight: bold;
+            background-color: #FFD700; /* Gold */
+        }
+        .second-team {
+            font-weight: bold;
+            background-color: #C0C0C0; /* Silver */
+        }
+        .third-team {
+            font-weight: bold;
+            background-color: #CD7F32; /* Bronze */
+        }
+
+        /* Table footer */
+        tfoot {
+            font-weight: bold;
+            text-align: left;
+        }
+
+        /* Responsive design: Stack table on small screens */
+        @media (max-width: 768px) {
+            table, th, td {
+                font-size: 14px;
+                padding: 8px;
+            }
+            th, td {
+                display: block;
+                width: 100%;
+                text-align: left;
+                border: none;
+            }
+            th {
+                background-color: #f4f4f4;
+                padding: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h2>Sports Tournament League Table</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Team Name</th>
+            <th>Matches Played</th>
+            <th>Wins</th>
+            <th>Losses</th>
+            <th>Draws</th>
+            <th>Points</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="top-team">
+            <td>Golden State Warriors</td>
+            <td>10</td>
+            <td>8</td>
+            <td>1</td>
+            <td>1</td>
+            <td>25</td>
+        </tr>
+        <tr class="second-team">
+            <td>Chicago Bulls</td>
+            <td>10</td>
+            <td>7</td>
+            <td>2</td>
+            <td>1</td>
+            <td>22</td>
+        </tr>
+        <tr class="third-team">
+            <td>Phoenix Suns</td>
+            <td>10</td>
+            <td>6</td>
+            <td>3</td>
+            <td>1</td>
+            <td>19</td>
+        </tr>
+        <tr>
+            <td>L.A. Lakers</td>
+            <td>10</td>
+            <td>4</td>
+            <td>5</td>
+            <td>1</td>
+            <td>13</td>
+        </tr>
+        <tr>
+            <td>Sacramento Kings</td>
+            <td>10</td>
+            <td>3</td>
+            <td>6</td>
+            <td>1</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Boston Celtics</td>
+            <td>10</td>
+            <td>2</td>
+            <td>7</td>
+            <td>1</td>
+            <td>7</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="6">
+                Total Matches Played: 60
+            </td>
+        </tr>
+    </tfoot>
+</table>
+
+</body>
+</html>

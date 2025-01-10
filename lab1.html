@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce Product Table</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+    td {
+      background-color: #fff;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    tr:hover {
+      background-color: #e0f7fa;
+    }
+    tfoot td {
+      text-align: right;
+      background-color: #f9f9f9;
+      font-weight: bold;
+    }
+    @media screen and (max-width: 600px) {
+      table {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>E-Commerce Product List</h1>
+  <table>
+    <caption><strong>Product Details</strong></caption>
+    <thead>
+      <tr>
+        <th>Product ID</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Price ($)</th>
+        <th>Discount (%)</th>
+        <th>Final Price ($)</th>
+        <th>Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>101</td>
+        <td>Razer Mouse</td>
+        <td>Electronics</td>
+        <td class="price">25.00</td>
+        <td class="discount">10</td>
+        <td class="final-price">22.50</td>
+        <td>★★★★☆</td>
+      </tr>
+      <tr>
+        <td>102</td>
+        <td>Coffee Mug</td>
+        <td>Kitchen</td>
+        <td class="price">15.00</td>
+        <td class="discount">5</td>
+        <td class="final-price">14.25</td>
+        <td>★★★☆☆</td>
+      </tr>
+      <tr>
+        <td>103</td>
+        <td>Office Chair</td>
+        <td>Furniture</td>
+        <td class="price">150.00</td>
+        <td class="discount">20</td>
+        <td class="final-price">120.00</td>
+        <td>★★★★★</td>
+      </tr>
+      <tr>
+        <td>104</td>
+        <td>Desk Lamp</td>
+        <td>Electronics</td>
+        <td class="price">30.00</td>
+        <td class="discount">15</td>
+        <td class="final-price">25.50</td>
+        <td>★★★★☆</td>
+      </tr>
+      <tr>
+        <td>105</td>
+        <td>Water Bottle</td>
+        <td>Kitchen</td>
+        <td class="price">12.00</td>
+        <td class="discount">10</td>
+        <td class="final-price">10.80</td>
+        <td>★★★☆☆</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="7"><strong>Total Products: 5</strong></td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <script>
+    const rows = document.querySelectorAll('tbody tr');
+    
+    rows.forEach(row => {
+      const price = parseFloat(row.querySelector('.price').textContent);
+      const discount = parseFloat(row.querySelector('.discount').textContent);
+      const finalPrice = price - (price * (discount / 100));
+      
+      row.querySelector('.final-price').textContent = finalPrice.toFixed(2);
+    });
+  </script>
+</body>
+</html>
